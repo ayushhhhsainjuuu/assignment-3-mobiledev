@@ -1,6 +1,7 @@
 import CircleButton from "@/components/ui/CircleButton";
 import DateBoxes from "@/components/ui/DateBoxes";
 import ProfilePicture from "@/components/ui/ProfilePicture";
+import FavouriteTeamButton from "@/components/homeComponents/FavouriteTeamButton";
 import { Ionicons } from "@expo/vector-icons";
 import { Tabs } from "expo-router";
 import { StyleSheet, View } from "react-native";
@@ -31,6 +32,7 @@ export default function TabsLayout() {
           headerRight: () => (
             <View style={styles.searchButton}>
               <CircleButton iconName="search-outline" iconSize={20} style={{width: 35, height: 35, borderWidth: 2, borderColor: "#242424"}}/>
+              <FavouriteTeamButton />
             </View>
           ),
           tabBarIcon: ({ focused }) => (
