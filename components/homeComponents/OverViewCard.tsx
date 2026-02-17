@@ -4,7 +4,7 @@ import CircleButton from "../ui/CircleButton";
 
 
 type Props = {
-    title: string,
+    gameDate: string,
     gameTime: string,
     teamA?: string,
     teamB?: string,
@@ -18,6 +18,7 @@ type Props = {
 export default function OverViewCard(props : Props){
     return(
         <View style={styles.background}>
+        <Text>{props.gameDate}</Text>
         <Text>{props.teamA}</Text>
         <Text>{props.teamB}</Text>
         <Text>{props.gameTime}</Text>
