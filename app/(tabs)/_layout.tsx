@@ -20,6 +20,19 @@ export default function TabsLayout() {
         options={{
           title: "Home",
           headerTitle: "Home",
+          headerTintColor: "white",
+          headerTitleContainerStyle: { left: 3, bottom: 8 },
+          headerStyle: { backgroundColor: "black", height: 100, borderBottomWidth: 2, borderBottomColor: "#1A1F25"},
+           headerLeft: () => (
+              <View style={styles.profilePicture}>
+                <ProfilePicture />
+              </View>
+          ),
+          headerRight: () => (
+            <View style={styles.searchButton}>
+              <CircleButton iconName="search-outline" iconSize={20} style={{width: 35, height: 35, borderWidth: 2, borderColor: "#242424"}}/>
+            </View>
+          ),
           tabBarIcon: ({ focused }) => (
             <Ionicons
               name={focused ? "home-sharp" : "home-outline"}
@@ -104,5 +117,9 @@ const styles = StyleSheet.create({
     marginBottom: 30,
     gap: 20,
     marginLeft: 13,
-  }
+  },
+  searchButton: {
+    marginRight: 80,
+    marginBottom: 15,
+  },
 });

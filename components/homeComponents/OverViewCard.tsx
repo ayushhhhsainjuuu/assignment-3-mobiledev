@@ -34,21 +34,21 @@ export default function OverViewCard(props : Props){
 const styles = StyleSheet.create({
     background:{
         backgroundColor: "#1A1A1A",
-        width: 350,
+        width: "99%",
         height: 300,
         borderRadius: 10,
         position: "relative"
     },
     CompCircleButtonStyle:{
         position: 'absolute',
-        left: 10,
+        left: "3%",
         top: 10,
         backgroundColor: "black"
 
     },
     MoreOptionsCircleButtonStyle:{
         position: 'absolute',
-        left: 310,
+        left: "90%",
         top: 10,
         backgroundColor: "black"
     },
@@ -75,28 +75,28 @@ const styles = StyleSheet.create({
         height: 60,
         position: "absolute",
         top: "11%",
-        left: "20%",
+        left: "18%",
       },
         teamBLogoStyle: {
         width: 60,
         height: 60,
         position: "absolute",
         top: "12.5%",
-        left: "63%",        
+        left: "68%",        
       },
     TeamAStyle:{
         marginLeft: "18%",
         fontSize: 14,
-        marginTop: "30%",
+        marginTop: "25%",
         position: "absolute",
         color: "white",
         
     },
     TeamBStyle:{
-        marginLeft: "62%",
+        marginLeft: "65%",
         fontSize: 14,
         position: "absolute",
-        marginTop: "30%",
+        marginTop: "25%",
         color: "white",
         // marginBottom:,
     }

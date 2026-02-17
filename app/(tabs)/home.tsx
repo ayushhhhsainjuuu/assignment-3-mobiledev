@@ -1,9 +1,10 @@
 import  OverViewCard from "@/components/homeComponents/OverViewCard";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View, ScrollView } from "react-native";
 import games from "@/data/games.json";
 
 export default function Home() {
   return (
+  <ScrollView>
     <View>
       <Text>Home Screen</Text>
       <View style={styles.OverViewCard}>
@@ -12,6 +13,7 @@ export default function Home() {
         ))}
       </View>
     </View>
+  </ScrollView>
   );
 }
 
