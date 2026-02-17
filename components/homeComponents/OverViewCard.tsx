@@ -20,8 +20,8 @@ export default function OverViewCard(props : Props){
     return(
         <View style={styles.background}>
         <Text style={styles.gameDateStyle}>{props.gameDate}</Text>
-        <Text>{props.teamA}</Text>
-        <Text>{props.teamB}</Text>
+        <Text style={styles.TeamAStyle}>{props.teamA}</Text>
+        <Text style={styles.TeamBStyle}>{props.teamB}</Text>
         <Text style={styles.gameTimeStyle}>{props.gameTime.trim().substring(0,5)}</Text>
         <CircleButton style={styles.CompCircleButtonStyle} iconName="football-outline" iconSize={20}/>
         <CircleButton style={styles.MoreOptionsCircleButtonStyle} iconName="ellipsis-vertical" iconSize={20}/>
@@ -84,4 +84,20 @@ const styles = StyleSheet.create({
         top: "12.5%",
         left: "63%",        
       },
+    TeamAStyle:{
+        marginLeft: "18%",
+        fontSize: 14,
+        marginTop: "30%",
+        position: "absolute",
+        color: "white",
+        
+    },
+    TeamBStyle:{
+        marginLeft: "62%",
+        fontSize: 14,
+        position: "absolute",
+        marginTop: "30%",
+        color: "white",
+        // marginBottom:,
+    }
 })
