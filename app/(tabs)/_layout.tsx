@@ -82,7 +82,33 @@ export default function TabsLayout() {
           ),
         }}
       />
+
+      <Tabs.Screen
+        name="standings"
+        options={{
+          headerTitle: "LaLiga",   // 👈 change text here
+          headerTitleStyle: {
+            color: "white",
+            fontSize: 22,
+            fontWeight: "900",
+          },
+          headerStyle: {
+            backgroundColor: "#0B0F14",
+            height: 120,
+            borderBottomWidth: 0,
+          },
+          headerShadowVisible: false,
+          tabBarIcon: ({ focused }) => (
+          <Ionicons
+            name={focused ? "stats-chart-sharp" : "stats-chart-outline"}
+            size={24}
+            color="white"
+      />
+    ),
+  }}
+/>
     </Tabs>
+    
   );
 }
 
