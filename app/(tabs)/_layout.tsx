@@ -14,6 +14,7 @@ export default function TabsLayout() {
         tabBarStyle: { backgroundColor: "#1A1F25", borderBottomWidth: 10, borderColor:"black" },
         tabBarLabelPosition: "below-icon",
         headerStyle: { backgroundColor: "black", height: 150, borderBottomWidth: 2, borderBottomColor: "#1A1F25"},
+        animation: "shift",
       }}
     >
       <Tabs.Screen
@@ -22,6 +23,7 @@ export default function TabsLayout() {
           title: "Home",
           headerTitle: "Home",
           headerTintColor: "white",
+          sceneStyle: { backgroundColor: "black" },
           headerTitleContainerStyle: { left: 3, bottom: 8 },
           headerStyle: { backgroundColor: "black", height: 100, borderBottomWidth: 2, borderBottomColor: "#1A1F25"},
            headerLeft: () => (
