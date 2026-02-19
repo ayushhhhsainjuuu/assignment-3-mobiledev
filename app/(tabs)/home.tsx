@@ -20,6 +20,7 @@ export default function Home() {
 const styles = StyleSheet.create({
     OverViewCard:{
         flexDirection: "row",
-        justifyContent: "center"
+        justifyContent: "center",
+        paddingTop: "15%",
     }
 });

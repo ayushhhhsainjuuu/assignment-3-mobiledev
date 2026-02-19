@@ -25,7 +25,7 @@ export default function TabsLayout() {
           headerTintColor: "white",
           sceneStyle: { backgroundColor: "black" },
           headerTitleContainerStyle: { left: 3, bottom: 8 },
-          headerStyle: { backgroundColor: "black", height: 100, borderBottomWidth: 2, borderBottomColor: "#1A1F25"},
+          headerStyle: { backgroundColor: "black", height: 100},
            headerLeft: () => (
               <View style={styles.profilePicture}>
                 <ProfilePicture />
@@ -33,8 +33,8 @@ export default function TabsLayout() {
           ),
           headerRight: () => (
             <View style={styles.searchButton}>
-              <CircleButton iconName="search-outline" iconSize={20} style={{width: 35, height: 35, borderWidth: 2, borderColor: "#242424"}}/>
-              <FavouriteTeamButton />
+              <CircleButton iconName="search-outline" iconSize={20} style={{width: 35, height: 35, borderWidth: 2, borderColor: "#242424",marginRight: 10}}/>
+              <FavouriteTeamButton style={{marginLeft: "90%"}}/>
             </View>
           ),
           tabBarIcon: ({ focused }) => (

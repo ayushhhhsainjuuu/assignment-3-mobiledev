@@ -1,9 +1,12 @@
-import { View, StyleSheet} from "react-native";
+import { View, StyleSheet, ViewStyle} from "react-native";
 
+type props = {
+   style?: ViewStyle | ViewStyle [],
+}
 
-export default function FavouriteTeamButton() {
+export default function FavouriteTeamButton(props: props) {
     return(
-        <View style={styles.buttonStyle}>
+        <View style={[styles.buttonStyle, props.style]}>
         <View style={styles.MiddleLeftVeritcalSeperator}></View>
         </View>
     )
