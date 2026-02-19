@@ -11,7 +11,7 @@ export default function TabsLayout() {
     <Tabs
       screenOptions={{
         tabBarActiveTintColor: "white",
-        tabBarStyle: { backgroundColor: "#1A1F25", borderBottomWidth: 10, borderColor:"black" },
+        tabBarStyle: { backgroundColor: "#1A1A1A", borderBottomWidth: 10, borderColor:"black" },
         tabBarLabelPosition: "below-icon",
         headerStyle: { backgroundColor: "black", height: 150, borderBottomWidth: 2, borderBottomColor: "#1A1F25"},
         animation: "shift",
