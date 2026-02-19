@@ -1,6 +1,6 @@
 import  OverViewCard from "@/components/homeComponents/OverViewCard";
 import Stories from "@/components/homeComponents/Stories";
-import { StyleSheet, Text, View, ScrollView } from "react-native";
+import { StyleSheet, View, ScrollView } from "react-native";
 import games from "@/data/games.json";
 
 export default function Home() {
@@ -34,8 +34,6 @@ const styles = StyleSheet.create({
         gap: 10,
         paddingHorizontal: 10,
         marginTop: 10,
-        
-        
     },
     
 });
