@@ -1,6 +1,8 @@
 import { Image } from "expo-image";
 import { StyleSheet, Text, View } from "react-native";
 import CircleButton from "../ui/CircleButton";
+// import { useRouter } from "@/.expo/types/router";
+import { useRouter } from 'expo-router';
 
 type Props = {
   gameDate: string;
@@ -14,40 +16,43 @@ type Props = {
 };
 
 export default function OverViewCard(props: Props) {
+const router = useRouter();
+
   return (
     <View style={styles.background}>
       {/* <Text style={styles.gameDateStyle}>{props.gameDate}</Text>
       <Text style={styles.gameTimeStyle}>
         {props.gameTime.trim().substring(0, 5)}
       </Text> */}
-      <View style={styles.teamsContainer}>
-        <View style={styles.teamColumn}>
-          <Image source={{ uri: props.teamALogoUrl }} style={styles.teamLogo} />
-          <Text style={styles.teamName}>{props.teamA}</Text>
-        </View>
-        <View>
-      <Text style={styles.gameDateStyle}>
-        {props.gameDate}
-        </Text>
-      <Text style={styles.gameTimeStyle}>
-        {props.gameTime.trim().substring(0, 5)}
-      </Text>         
-        </View>
-        <View style={styles.teamColumn}>
-          <Image source={{ uri: props.teamBLogoUrl }} style={styles.teamLogo} />
-          <Text style={styles.teamName}>{props.teamB}</Text>
-        </View>
-      </View>
+        <View style={styles.circleButtonContainer}>
       <CircleButton
         style={styles.CompCircleButtonStyle}
         iconName="football-outline"
         iconSize={20}
+        onPress={() => router.navigate("/standing")}
       />
       <CircleButton
         style={styles.MoreOptionsCircleButtonStyle}
         iconName="ellipsis-vertical"
         iconSize={20}
       />
+      </View>
+      <View style={styles.teamsContainer}>
+        <View style={styles.teamColumn}>
+          <Image source={{ uri: props.teamALogoUrl }} style={styles.teamLogo} />
+          <Text style={styles.teamName}>{props.teamA}</Text>
+        </View>
+        <View style={styles.gameInfoColumn}>
+          <Text style={styles.gameDateStyle}>{props.gameDate}</Text>
+          <Text style={styles.gameTimeStyle}>
+            {props.gameTime.trim().substring(0, 5)}
+          </Text>
+        </View>
+        <View style={styles.teamColumn}>
+          <Image source={{ uri: props.teamBLogoUrl }} style={styles.teamLogo} />
+          <Text style={styles.teamName}>{props.teamB}</Text>
+        </View>
+      </View>
     </View>
   );
 }
@@ -64,11 +69,18 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-around",
     alignItems: "center",
-    flex: 1,
+    flex: 0,
+  },
+  circleButtonContainer: {
+    flexDirection: "row",
+    justifyContent: "center",
+    gap: "76%",
+    flex: 0,
+    paddingVertical: "5%",
   },
   teamColumn: {
     alignItems: "center",
-    gap: 10,
+    gap: "10%",
   },
   teamLogo: {
     width: 60,
@@ -80,29 +92,23 @@ const styles = StyleSheet.create({
     fontWeight: "500",
   },
   CompCircleButtonStyle: {
-    position: "absolute",
-    left: "3%",
-    top: 10,
     backgroundColor: "black",
   },
   MoreOptionsCircleButtonStyle: {
-    position: "absolute",
-    left: "90%",
-    top: 10,
     backgroundColor: "black",
+  },
+  gameInfoColumn:{
+    alignItems:"center",
+    gap:"5%",
+    paddingLeft:"2%",
   },
   gameDateStyle: {
     color: "white",
-    textAlign: "center",
-    width: "100%",
     fontSize: 11,
     fontWeight: "bold",
   },
   gameTimeStyle: {
-
     color: "white",
-    textAlign: "center",
-    width: "100%",
     fontSize: 30,
     fontWeight: "bold",
   },
