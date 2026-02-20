@@ -1,6 +1,7 @@
 import  OverViewCard from "@/components/homeComponents/OverViewCard";
 import Stories from "@/components/homeComponents/Stories";
-import { StyleSheet, View, ScrollView } from "react-native";
+import NewsCard from "@/components/homeComponents/NewsCard";
+import { StyleSheet, View, ScrollView, } from "react-native";
 import games from "@/data/games.json";
 
 export default function Home() {
@@ -19,6 +20,12 @@ export default function Home() {
         ))}
       </View>
     </View>
+      <View style={styles.NewsStyle}>
+        {games.map((game) => (
+          <NewsCard key={game.id}/>
+        ))}
+      </View>
+  
   </ScrollView>
   );
 }
@@ -35,5 +42,11 @@ const styles = StyleSheet.create({
         paddingHorizontal: 10,
         marginTop: 10,
     },
+    NewsStyle: {
+      top: 20,
+      marginBottom:30,
+      gap: 10,
+      alignItems:"center"
+    }
     
 });
