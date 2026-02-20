@@ -24,6 +24,7 @@ const router = useRouter();
       <Text style={styles.gameTimeStyle}>
         {props.gameTime.trim().substring(0, 5)}
       </Text> */}
+      <Text style={styles.clickHereStyle}>Click Button on left</Text>
         <View style={styles.circleButtonContainer}>
       <CircleButton
         style={styles.CompCircleButtonStyle}
@@ -112,4 +113,10 @@ const styles = StyleSheet.create({
     fontSize: 30,
     fontWeight: "bold",
   },
+  clickHereStyle: {
+    color: "white",
+    position: "absolute",
+    top: "8%",
+    left: "20%",
+  }
 });

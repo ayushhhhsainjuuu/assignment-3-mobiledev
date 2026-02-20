@@ -1,5 +1,7 @@
 import React from "react";
 import { FlatList, StyleSheet, Text, View } from "react-native";
+import { useRouter } from 'expo-router';
+import { Ionicons } from "@expo/vector-icons";
 
 type Row = {
   team: string;
@@ -34,9 +36,19 @@ const standingsData: Row[] = [
 ];
 
 export default function Standings() {
+  const router = useRouter();
   return (
     <View style={styles.container}>
+      <View style={styles.HeaderContainer}>
+        <Ionicons
+          name="arrow-back"
+          size={24}
+          color="white"
+          onPress={() => router.back()}
+          style={styles.BackArrowStyle}
+        />
       <Text style={styles.title}>Standings</Text>
+       </View>
 
       <FlatList
         data={standingsData}
@@ -178,4 +190,12 @@ const styles = StyleSheet.create({
     borderLeftWidth: 4,
     borderLeftColor: "#EF4444",
   },
+  HeaderContainer: {
+    flexDirection: "row",
+    gap: 16,
+  },
+  BackArrowStyle:{
+    paddingTop: "2%",
+  }
+
 });
