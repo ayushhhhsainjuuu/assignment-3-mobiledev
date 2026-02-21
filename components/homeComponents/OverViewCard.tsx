@@ -1,5 +1,5 @@
 import { Image } from "expo-image";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View, FlatList} from "react-native";
 import CircleButton from "../ui/CircleButton";
 // import { useRouter } from "@/.expo/types/router";
 import { useRouter } from 'expo-router';
@@ -20,10 +20,6 @@ const router = useRouter();
 
   return (
     <View style={styles.background}>
-      {/* <Text style={styles.gameDateStyle}>{props.gameDate}</Text>
-      <Text style={styles.gameTimeStyle}>
-        {props.gameTime.trim().substring(0, 5)}
-      </Text> */}
       <Text style={styles.clickHereStyle}>Click Button on left</Text>
         <View style={styles.circleButtonContainer}>
       <CircleButton
@@ -54,6 +50,21 @@ const router = useRouter();
           <Text style={styles.teamName}>{props.teamB}</Text>
         </View>
       </View>
+      {/* <Text style={styles.sectionTitle}>Today's Matches</Text> */}
+      <FlatList
+        horizontal
+        showsHorizontalScrollIndicator={false}
+        data={matches}
+        keyExtractor={(item) => item.id}
+        renderItem={({ item }) => (
+          <View style={styles.matchCard}>
+            <Text style={styles.team}>{item.home}</Text>
+            <Text style={styles.vs}>vs</Text>
+            <Text style={styles.team}>{item.away}</Text>
+            <Text style={styles.time}>{item.time}</Text>
+          </View>
+        )}
+      />
     </View>
   );
 }
