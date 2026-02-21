@@ -10,7 +10,9 @@
     "teamALogoUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Escudo_real_betis_1941.svg",
     "teamBLogoUrl": "https://upload.wikimedia.org/wikipedia/fr/9/93/Logo_Atl%C3%A9tico_Madrid_2017.svg",
     "compLogoUrl": "https://upload.wikimedia.org/wikipedia/commons/b/ba/Copa_Del_Rey_Official_Logo.png",
-    "moreInfo": "See Table"
+    "moreInfo": "See Table",
+    "isFavorite": true,
+    "gameDate": "Today"
   },
   {
     "id": 2,
@@ -23,7 +25,9 @@
     "teamALogoUrl": "https://upload.wikimedia.org/wikipedia/en/8/80/Racing_Club_de_Strasbourg_logo.svg",
     "teamBLogoUrl": "https://upload.wikimedia.org/wikipedia/en/c/cf/LogoASMonacoFC2021.svg",
     "compLogoUrl": "https://a.espncdn.com/combiner/i?img=%2Fi%2Fleaguelogos%2Fsoccer%2F500%2F182.png",
-    "moreInfo": "See Table"
+    "moreInfo": "See Table",
+    "isFavorite": false,
+    "gameDate": "2024-06-15"
   },
   {
     "id": 3,
@@ -36,7 +40,9 @@
     "teamALogoUrl": "https://upload.wikimedia.org/wikipedia/en/5/53/Arsenal_FC.svg",
     "teamBLogoUrl": "https://upload.wikimedia.org/wikipedia/en/0/0c/Liverpool_FC.svg",
     "compLogoUrl": "https://upload.wikimedia.org/wikipedia/en/f/f2/Premier_League_Logo.svg",
-    "moreInfo": "See Table"
+    "moreInfo": "See Table",
+    "isFavorite": false,
+    "gameDate": "2024-06-15"
 
     
   }

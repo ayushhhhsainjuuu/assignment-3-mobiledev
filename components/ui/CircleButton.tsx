@@ -1,21 +1,25 @@
 
-import { View,StyleSheet } from "react-native";
+import { View,StyleSheet, ViewStyle, Pressable } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 
 type props = {
     iconName? : string, 
     iconSize? : number,
+    style? : ViewStyle | ViewStyle [],
+    onPress? : () => void,
 };
 
 
 export default function CircleButton(props: props) {
   
   return( 
-  <View style={styles.button}>
-      <View style={styles.iconStyle}>
-      <Ionicons name={props.iconName as any} size={props.iconSize} color="white" />
-      </View>
-  </View>
+    <Pressable onPress={props.onPress}>
+        <View style={[styles.button, props.style]}>
+            <View style={styles.iconStyle}>
+            <Ionicons name={props.iconName as any} size={props.iconSize} color="white" />
+            </View>
+        </View>
+    </Pressable>
   );
 }
 

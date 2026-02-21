@@ -1,6 +1,7 @@
 import CircleButton from "@/components/ui/CircleButton";
 import DateBoxes from "@/components/ui/DateBoxes";
 import ProfilePicture from "@/components/ui/ProfilePicture";
+import FavouriteTeamButton from "@/components/homeComponents/FavouriteTeamButton";
 import { Ionicons } from "@expo/vector-icons";
 import { Tabs } from "expo-router";
 import { StyleSheet, View } from "react-native";
@@ -11,9 +12,10 @@ export default function TabsLayout() {
       screenOptions={{
         headerShown: false,
         tabBarActiveTintColor: "white",
-        tabBarStyle: { backgroundColor: "#1A1F25", borderBottomWidth: 10, borderColor:"black" },
+        tabBarStyle: { backgroundColor: "#1A1A1A", borderBottomWidth: 10, borderColor:"black" },
         tabBarLabelPosition: "below-icon",
         headerStyle: { backgroundColor: "black", height: 150, borderBottomWidth: 2, borderBottomColor: "#1A1F25"},
+        animation: "shift",
       }}
     >
       <Tabs.Screen
@@ -21,6 +23,21 @@ export default function TabsLayout() {
         options={{
           title: "Home",
           headerTitle: "Home",
+          headerTintColor: "white",
+          sceneStyle: { backgroundColor: "black" },
+          headerTitleContainerStyle: { left: 3, bottom: 8 },
+          headerStyle: { backgroundColor: "black", height: 100},
+           headerLeft: () => (
+              <View style={styles.profilePicture}>
+                <ProfilePicture />
+              </View>
+          ),
+          headerRight: () => (
+            <View style={styles.searchButton}>
+              <CircleButton iconName="search-outline" iconSize={20} style={{width: 35, height: 35, borderWidth: 2, borderColor: "#242424",marginRight: 10}}/>
+              <FavouriteTeamButton style={{marginLeft: "90%"}}/>
+            </View>
+          ),
           tabBarIcon: ({ focused }) => (
             <Ionicons
               name={focused ? "home-sharp" : "home-outline"}
@@ -131,5 +148,9 @@ const styles = StyleSheet.create({
     marginBottom: 30,
     gap: 20,
     marginLeft: 13,
-  }
+  },
+  searchButton: {
+    marginRight: 80,
+    marginBottom: 15,
+  },
 });
