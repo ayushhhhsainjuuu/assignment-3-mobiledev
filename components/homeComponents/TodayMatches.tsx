@@ -1,6 +1,29 @@
 import { Image } from "expo-image";
 import { StyleSheet, Text, View, FlatList} from "react-native";
 
+const matches = [
+  {
+    id: "1",
+    home: "Barcelona",
+    away: "Real Madrid",
+    time: "18:00",
+  },
+  {
+    id: "2",
+    home: "Atletico",
+    away: "Sevilla",
+    time: "20:30",
+  },
+  {
+    id: "3",
+    home: "Valencia",
+    away: "Villarreal",
+    time: "22:00",
+  },
+];
+
+
+
 export default function TodayMatches() {
     return(
       <FlatList
@@ -21,5 +44,29 @@ export default function TodayMatches() {
 }
 
 const styles = StyleSheet.create({
+  matchCard: {
+    width: 220,
+    backgroundColor: "#111827",
+    borderRadius: 18,
+    padding: 16,
+    marginRight: 14,
+    borderWidth: 1,
+    borderColor: "#1F2937",
+  },
+  team: {
+    color: "white",
+    fontWeight: "800",
+    fontSize: 16,
+  },
+
+  vs: {
+    color: "#9CA3AF",
+    marginVertical: 4,
+  },
+  time: {
+    marginTop: 10,
+    color: "#60A5FA",
+    fontWeight: "700",
+  },
 
 });
