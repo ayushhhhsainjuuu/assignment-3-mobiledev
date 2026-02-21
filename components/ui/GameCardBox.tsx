@@ -26,11 +26,12 @@ export default function GameCardBox(props: Props) {
             <Text style={[styles.TextColorWhite,styles.TeamAStyle]}>{props.teamA}</Text>
             <Text style={[styles.TextColorWhite,styles.TeamBStyle]}>{props.teamB}</Text>
             <View style={styles.BottomHorizontalSeperator}/>
-            <Text style={[styles.TextColorWhite,styles.SeeMatchdayStyle]}>{props.moreInfo}</Text>
             <Image source={{uri: props.teamALogoUrl}} style={styles.teamALogoStyle}/>
             <Image source={{uri: props.teamBLogoUrl}} style={styles.teamBLogoStyle}/>
-            <Image source={{uri: props.compLogoUrl}} style={styles.compLogoStyle}/> 
-            {/* <Image source={{uri: props.teamBLogoUrl}}/> */}
+            <Image source={{uri: props.compLogoUrl}} style={styles.compLogoStyle}/>
+            <View style={styles.seeMatchdayContainer}   >
+            <Text style={[styles.TextColorWhite,styles.SeeMatchdayStyle]}>{props.moreInfo}</Text>
+            </View>
         </View>
     );
 }
@@ -45,7 +46,13 @@ const styles = StyleSheet.create({
         borderTopColor: "#242424",
 
     },
-
+    seeMatchdayContainer:{
+        flexDirection: "row",
+        flex: 1,
+        justifyContent: "flex-start",
+        alignItems: "flex-end",
+        marginBottom: 10,
+    },
     TextColorWhite:{
         color: "white",
     },
