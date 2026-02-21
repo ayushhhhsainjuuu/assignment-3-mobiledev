@@ -1,4 +1,3 @@
-import { Image } from "expo-image";
 import { StyleSheet, Text, View, FlatList} from "react-native";
 
 const matches = [
@@ -22,8 +21,6 @@ const matches = [
   },
 ];
 
-
-
 export default function TodayMatches() {
     return(
       <FlatList
@@ -42,7 +39,6 @@ export default function TodayMatches() {
       />
     );
 }
-
 const styles = StyleSheet.create({
   matchCard: {
     width: 220,

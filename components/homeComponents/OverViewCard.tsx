@@ -1,8 +1,7 @@
 import { Image } from "expo-image";
-import { StyleSheet, Text, View, FlatList} from "react-native";
+import { StyleSheet, Text, View} from "react-native";
 import CircleButton from "../ui/CircleButton";
 import TodayMatches from "./TodayMatches";
-// import { useRouter } from "@/.expo/types/router";
 import { useRouter } from 'expo-router';
 
 type Props = {
